@@ -1,29 +1,24 @@
 import React from "react";
 import img from "../assets/favicon/favicon.ico";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 const About: React.FC = () => {
   return (
     <section id="about" className="about background-alt">
-      <Container data-aos="fade-up">
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }} data-aos="fade-up">
         <div className="section-title">
           <h2>About</h2>
         </div>
 
-        <Row>
-          <Col lg={4} className="d-flex justify-content-center">
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "30px", alignItems: "start" }}>
+          <div style={{ display: "flex", justifyContent: "center" }}>
             <img
               src={img}
               alt="Profile"
-              height="100%"
-              width="50%"
-              style={{ borderRadius: "50%" }}
+              style={{ borderRadius: "50%", width: "50%", height: "auto" }}
             />
-          </Col>
+          </div>
 
-          <Col lg={8} className="content pt-4">
+          <div className="content" style={{ paddingTop: "16px" }}>
             <br />
             <h3>Software Developer.</h3>
             <br />
@@ -39,8 +34,8 @@ const About: React.FC = () => {
             </p>
             <br />
 
-            <Row>
-              <Col lg={4}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1.75fr", gap: "30px" }}>
+              <div>
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
@@ -53,9 +48,9 @@ const About: React.FC = () => {
                     <span>Dublin, Ireland</span>
                   </li>
                 </ul>
-              </Col>
+              </div>
 
-              <Col lg={7}>
+              <div>
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
@@ -72,11 +67,11 @@ const About: React.FC = () => {
                     </span>
                   </li>
                 </ul>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Container>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
