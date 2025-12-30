@@ -1,5 +1,5 @@
 import React from "react";
-import SchoolIcon from "@mui/icons-material/School";
+
 class Header extends React.Component<{}, {}> {
   constructor(props: {}) {
     super(props);
@@ -11,60 +11,32 @@ class Header extends React.Component<{}, {}> {
     window.addEventListener("load", this.navbarlinksActive);
     this.onscroll(document, this.navbarlinksActive);
 
-    this.on("click", ".mobile-nav-toggle", function (this: HTMLElement, e: Event) {
-      document.querySelector("body")?.classList.toggle("mobile-nav-active");
-      this.classList.toggle("bi-list");
-      this.classList.toggle("bi-x");
+    this.on("click", ".scrollto", (e: Event) => {
+      const target = e.currentTarget as HTMLAnchorElement;
+      if (target.hash && document.querySelector(target.hash)) {
+        e.preventDefault();
+        this.scrollto(target.hash);
+      }
     });
-
-    this.on(
-      "click",
-      ".scrollto",
-      function (this: HTMLAnchorElement, e: Event) {
-        if (document.querySelector(this.hash)) {
-          e.preventDefault();
-
-          const body = document.querySelector("body");
-          if (body?.classList.contains("mobile-nav-active")) {
-            body.classList.remove("mobile-nav-active");
-            const navbarToggle = document.querySelector(".mobile-nav-toggle");
-            navbarToggle?.classList.toggle("bi-list");
-            navbarToggle?.classList.toggle("bi-x");
-          }
-
-          const elementPos = document.querySelector(this.hash)?.offsetTop || 0;
-          window.scrollTo({
-            top: elementPos,
-            behavior: "smooth",
-          });
-        }
-      },
-      true
-    );
   }
 
-  select(el: string, all = false): HTMLElement | HTMLElement[] | null {
+  select(el: string, all = false) {
     el = el.trim();
     if (all) {
-      return [...document.querySelectorAll(el)] as HTMLElement[];
+      return [...document.querySelectorAll(el)];
     } else {
-      return document.querySelector(el) as HTMLElement | null;
+      return document.querySelector(el);
     }
   }
 
-  on(
-    type: string,
-    el: string,
-    listener: EventListenerOrEventListenerObject,
-    all = false
-  ) {
+  on(type: string, el: string, listener: EventListenerOrEventListenerObject, all = false) {
     const selectEl = this.select(el, all);
-    if (selectEl) {
-      if (all && Array.isArray(selectEl)) {
-        selectEl.forEach((e) => e.addEventListener(type, listener));
-      } else if (selectEl instanceof HTMLElement) {
-        selectEl.addEventListener(type, listener);
-      }
+    if (!selectEl) return;
+
+    if (all && Array.isArray(selectEl)) {
+      selectEl.forEach((e) => e.addEventListener(type, listener));
+    } else {
+      (selectEl as HTMLElement).addEventListener(type, listener);
     }
   }
 
@@ -88,6 +60,7 @@ class Header extends React.Component<{}, {}> {
       if (!navbarlink.hash) return;
       const section = document.querySelector(navbarlink.hash);
       if (!section) return;
+
       if (
         position >= section.offsetTop &&
         position <= section.offsetTop + section.offsetHeight
@@ -101,54 +74,39 @@ class Header extends React.Component<{}, {}> {
 
   render() {
     return (
-      <div>
-        <i
-          className="bi bi-list mobile-nav-toggle d-xl-none"
-          style={{ color: "rgb(114, 131, 148)" }}
-        ></i>
-        <header id="header" className="header d-flex flex-column justify-content-center">
-          <nav id="navbar" className="navbar nav-menu navbar-expand-sm">
-            <ul>
-              <li>
-                <a href="#hero" className="nav-link scrollto active d-flex justify-content-center">
-                  <i className="bx bx-home"></i>
-                  <span>Home</span>
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="nav-link scrollto d-flex justify-content-center">
-                  <i className="bx bx-user"></i>
-                  <span>About</span>
-                </a>
-              </li>
-              <li>
-                <a href="#experience" className="nav-link scrollto d-flex justify-content-center">
-                  <i className="bx bx-briefcase"></i>
-                  <span>Experience</span>
-                </a>
-              </li>
-              <li>
-                <a href="#projects" className="nav-link scrollto d-flex justify-content-center">
-                  <i className="bx bx-code"></i>
-                  <span>Projects</span>
-                </a>
-              </li>
-              <li>
-                <a href="#achievements" className="nav-link scrollto d-flex justify-content-center">
-                  <i className="bx bx-award"></i>
-                  <span>Achievements</span>
-                </a>
-              </li>
-              <li>
-                <a href="#education" className="nav-link scrollto d-flex justify-content-center">
-                  <SchoolIcon />
-                  <span>Education</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-      </div>
+      <header id="header" className="header d-flex flex-column justify-content-center">
+        <nav id="navbar" className="navbar flex-column sidebar-nav">
+          <a href="#hero" className="nav-link scrollto active">
+            <i className="bi bi-house-door"></i>
+            <span>Home</span>
+          </a>
+
+          <a href="#about" className="nav-link scrollto">
+            <i className="bi bi-person"></i>
+            <span>About</span>
+          </a>
+
+          <a href="#experience" className="nav-link scrollto">
+            <i className="bi bi-briefcase"></i>
+            <span>Experience</span>
+          </a>
+
+          <a href="#projects" className="nav-link scrollto">
+            <i className="bi bi-kanban"></i>
+            <span>Projects</span>
+          </a>
+
+          <a href="#education" className="nav-link scrollto">
+            <i className="bi bi-mortarboard"></i>
+            <span>Education</span>
+          </a>
+
+          <a href="#contact" className="nav-link scrollto">
+            <i className="bi bi-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </nav>
+      </header>
     );
   }
 }
