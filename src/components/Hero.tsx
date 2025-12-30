@@ -18,19 +18,16 @@ const Hero: React.FC = () => {
                         </p>
 
                         <div className="social-links">
-                            <a href="https://www.youtube.com/channel/UC8TXgNmZW2hMis074yGOTUQ">
-                                <i className="bx bxl-youtube"></i>
-                            </a>
-                            <a href="https://www.instagram.com/bhushan_borole_/">
+                            <a href="https://www.instagram.com/reddy_patlolla_/">
                                 <i className="bx bxl-instagram"></i>
                             </a>
-                            <a href="https://github.com/bhushan-borole">
+                            <a href="https://github.com/diveshdp">
                                 <i className="bx bxl-github"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/bhushan-borole/">
+                            <a href="https://www.linkedin.com/in/divesh-patlolla-5056bb259/">
                                 <i className="bx bxl-linkedin"></i>
                             </a>
-                            <a href="mailto:borolebhushan8@gmail.com">
+                            <a href="mailto:diveshree77@gmail.com">
                                 <i className="bx bx-envelope"></i>
                             </a>
                         </div>

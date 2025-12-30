@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/favicon/favicon.ico";
+// import img from "../assets/favicon/favicon.ico";
 
 const About: React.FC = () => {
   return (
@@ -11,11 +11,11 @@ const About: React.FC = () => {
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: "30px", alignItems: "start" }}>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img
+            {/* <img
               src={img}
               alt="Profile"
               style={{ borderRadius: "50%", width: "50%", height: "auto" }}
-            />
+            /> */}
           </div>
 
           <div className="content" style={{ paddingTop: "16px" }}>
@@ -40,12 +40,12 @@ const About: React.FC = () => {
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
                     <strong>Phone:</strong>{" "}
-                    <span>+353 0894010329</span>
+                    <span>+1 8563985330</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
                     <strong>City:</strong>{" "}
-                    <span>Dublin, Ireland</span>
+                    <span>Paoli, Philadelphia</span>
                   </li>
                 </ul>
               </div>
@@ -55,14 +55,14 @@ const About: React.FC = () => {
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
                     <strong>Degree:</strong>{" "}
-                    <span>MSc - Intelligent Systems @ TCD (2021-2022)</span>
+                    <span>Masters - Information Systems @ Trine University (2022-2023)</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>{" "}
                     <strong>Email:</strong>{" "}
                     <span>
-                      <a href="mailto:borolebhushan8@gmail.com">
-                        borolebhushan8@gmail.com
+                      <a href="mailto:diveshree77@gmail.com">
+                        diveshree77@gmail.com
                       </a>
                     </span>
                   </li>
