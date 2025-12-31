@@ -11,7 +11,7 @@ import Contact from "./Contact";
 const Main: React.FC = () => (
   <main id="main">
     <About />
-    {/* <Experience /> */}
+    <Experience />
     {/* <Projects /> */}
     <Skills />
     {/* <Achievements /> */}

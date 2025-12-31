@@ -1,4 +1,5 @@
 import React from "react";
+import "./header.css";
 
 class Header extends React.Component<{}, {}> {
   constructor(props: {}) {
@@ -22,11 +23,7 @@ class Header extends React.Component<{}, {}> {
 
   select(el: string, all = false) {
     el = el.trim();
-    if (all) {
-      return [...document.querySelectorAll(el)];
-    } else {
-      return document.querySelector(el);
-    }
+    return all ? [...document.querySelectorAll(el)] : document.querySelector(el);
   }
 
   on(type: string, el: string, listener: EventListenerOrEventListenerObject, all = false) {
@@ -74,8 +71,8 @@ class Header extends React.Component<{}, {}> {
 
   render() {
     return (
-      <header id="header" className="header d-flex flex-column justify-content-center">
-        <nav id="navbar" className="navbar flex-column sidebar-nav">
+      <header id="header" className="header">
+        <nav id="navbar" className="sidebar-nav">
           <a href="#hero" className="nav-link scrollto active">
             <i className="bi bi-house-door"></i>
             <span>Home</span>

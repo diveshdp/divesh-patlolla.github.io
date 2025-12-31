@@ -59,7 +59,7 @@ const Experience: React.FC = () => {
         </div>
         <div className="row">
           <div className="col-lg-12 d-flex justify-content-center">
-            <VerticalTimeline className="custom-line">
+            {/* <VerticalTimeline className="custom-line">
               {items.map((data, i) => (
                 <VerticalTimelineElement
                   key={i}
@@ -92,7 +92,7 @@ const Experience: React.FC = () => {
                   </ul>
                 </VerticalTimelineElement>
               ))}
-            </VerticalTimeline>
+            </VerticalTimeline> */}
           </div>
         </div>
       </div>

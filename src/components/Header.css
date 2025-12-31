@@ -1,46 +1,70 @@
+/* Sidebar container */
 .sidebar-nav {
   position: fixed;
-  left: 20px;
   top: 50%;
+  left: 20px;
   transform: translateY(-50%);
-  width: 65px;
-  background: #0d0d0d;
+  width: 65px; /* Collapsed width */
+  /* background: #000000; */
   border-radius: 50px;
-  padding: 20px 10px;
-  overflow: hidden;
+  padding: 18px 10px;
   transition: width 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
+/* Expand on hover */
 .sidebar-nav:hover {
   width: 180px;
 }
 
-.sidebar-nav .nav-link {
+/* Navigation link styling */
+.nav-link {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 12px;
-  color: #adb5bd;
   white-space: nowrap;
-  transition: 0.2s;
   font-size: 15px;
+  color: #9ba1a6;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.sidebar-nav .nav-link i {
+/* Icons default */
+.nav-link i {
   font-size: 22px;
-  color: #fff;
+  color: #ffffff;
 }
 
-.sidebar-nav .nav-link span {
+/* Hide text by default */
+.nav-link span {
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: translateX(-10px);
+  transition: all 0.25s ease;
 }
 
+/* Reveal text on hover */
 .sidebar-nav:hover .nav-link span {
   opacity: 1;
+  transform: translateX(0);
 }
 
-.nav-link.active,
-.nav-link:hover {
+/* Hover and active styling */
+.nav-link:hover,
+.nav-link.active {
   color: #00e6ff !important;
+}
+
+.nav-link:hover i,
+.nav-link.active i {
+  color: #00e6ff !important;
+}
+
+/* Active tab always shows text even without hover */
+.nav-link.active span {
+  opacity: 1;
+  transform: translateX(0);
 }
