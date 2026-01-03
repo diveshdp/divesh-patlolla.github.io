@@ -1,0 +1,142 @@
+/* ===============================
+   CONTACT SECTION
+================================ */
+
+.contact.section-bg {
+  background: radial-gradient(circle at top, #2a2a2a 0%, #1f1f1f 0%);
+  padding: 100px 20px;
+}
+
+/* ===============================
+   SECTION TITLE
+================================ */
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===============================
+   CONTACT CARD
+================================ */
+
+.contact-form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 36px;
+  border-radius: 16px;
+
+  background: #262626;
+
+  /* Clean layered shadow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ===============================
+   FORM
+================================ */
+
+#contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===============================
+   INPUTS & TEXTAREA
+================================ */
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+
+  background: #1b1b1b;
+  color: #ffffff;
+  font-size: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+/* Placeholder */
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #ffffff;
+}
+
+/* Focus state */
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.25),
+    inset 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* ===============================
+   SUBMIT BUTTON
+================================ */
+
+.contact-button {
+  width: 100%;
+  padding: 14px;
+  background: #1e90ff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(30, 144, 255, 0.45);
+}
+
+.contact-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ===============================
+   SUCCESS TOAST
+================================ */
+
+.contact-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  background: #4caf50;
+  color: #ffffff;
+
+  padding: 14px 18px;
+  border-radius: 8px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+
+  z-index: 1000;
+  font-size: 14px;
+}

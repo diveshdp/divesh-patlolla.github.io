@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Contact.css";
 
 const FORMSPARK_URL = "https://submit-form.com/CARCkqSD";
 
@@ -19,70 +20,58 @@ const Contact: React.FC = () => {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          email,
-          message,
-        }),
+        body: JSON.stringify({ email, message }),
       });
 
       setOpen(true);
       setEmail("");
       setMessage("");
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    } catch (err) {
+      console.error(err);
     } finally {
-      // Proper way to delay re-enabling the button
       setTimeout(() => setDisable(false), 2000);
     }
   };
 
   return (
     <section id="contact" className="contact section-bg">
-      <div className="container" data-aos="fade-up">
-        <div className="section-title">
-          <h2 style={{ fontWeight: "bold", color: "rgba(255, 255, 255, 0.8)" }}>
-            Get in Touch
-          </h2>
+      <div className="contact-container" data-aos="fade-up">
+        <div className="contact-title">
+          <h2 style={{color: "white"}}>Get in Touch</h2>
         </div>
-        <div id="contact-form">
-          <form onSubmit={onSubmit}>
+
+        <div className="contact-form-wrapper">
+          <form className="contact-form" onSubmit={onSubmit}>
             <input
-              id="email"
+              className="contact-input"
               type="email"
-              name="email"
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+
             <textarea
-              id="message"
-              name="message"
+              className="contact-textarea"
               placeholder="Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
-            ></textarea>
-            <button type="submit" disabled={disable}>
+            />
+
+            <button
+              className="contact-button"
+              type="submit"
+              disabled={disable}
+            >
               Submit
             </button>
           </form>
         </div>
       </div>
+
       {open && (
-        <div
-          style={{
-            position: "fixed",
-            bottom: "20px",
-            left: "20px",
-            backgroundColor: "#4caf50",
-            color: "white",
-            padding: "16px",
-            borderRadius: "4px",
-            boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-            zIndex: 1000,
-          }}
-        >
+        <div className="contact-toast">
           Your Message is sent!
         </div>
       )}
