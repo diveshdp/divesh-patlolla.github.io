@@ -19,8 +19,7 @@ const About: React.FC = () => {
             <h3>Software Developer.</h3>
 
             <p>
-              A passionate Full Stack Developer, Competitive Programmer, ML
-              enthusiast and Tabla player.
+              A passionate Full Stack Developer, Competitive Programmer, Cricketer.
             </p>
 
             <p>

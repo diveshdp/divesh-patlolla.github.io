@@ -99,7 +99,7 @@
 }
 
 .about-content p {
-  color: #9aa4ad;
+  color: #7a8a94;
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -116,13 +116,37 @@
   margin-top: 30px;
 }
 
+.about-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .about-info li {
-  color: #a0a8b0;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  color: #7a8a94;
   font-size: 15px;
+  line-height: 1.6;
 }
 
 .about-info i {
   color: #1e90ff;
+  margin-right: 12px;
+  margin-top: 2px;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.about-info strong {
+  color: #8a9199;
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.about-info span {
+  color: #7a8a94;
 }
 
 /* ===============================
