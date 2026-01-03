@@ -14,10 +14,11 @@ const Experience: React.FC = () => {
     {
       date: "January 2024 - Present",
       cardTitle: "Vanguard",
-      cardSubtitle: "Software Engineer",
+      cardSubtitle: "Frontend Engineer (React & Micro Frontends)",
       cardDetailedText: [
-        "Developing automated systems that detect security issues and manage workflows across Azure Identity services on a global scale.",
-        "Implement privacy-enhancing technologies to ensure compliance with applicable privacy laws and regulations.",
+        "Built dynamic web apps using React, React Query, Zustand, and MUI/AG Grid for enterprise systems",
+        "Implemented modular micro-frontend architectures with Module Federation across multiple teams",
+        "Optimized performance & quality with lazy loading, reusable components, Vitest & React Testing Library",
       ].map((text, idx) => <li key={idx}>{text}</li>),
     },
     // {
