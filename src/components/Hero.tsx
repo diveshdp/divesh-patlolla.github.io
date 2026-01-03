@@ -77,7 +77,8 @@ const Hero: React.FC = () => {
                         <Button
                             variant="outlined"
                             target="_blank"
-                            href="https://drive.google.com/file/d/1XVfSZNcC6P9QlmEgA3s1Ebi23kydQGYj/view?usp=sharing"
+                            href=""
+                            // href="https://drive.google.com/file/d/1XVfSZNcC6P9QlmEgA3s1Ebi23kydQGYj/view?usp=sharing"
                             startIcon={<CloudDownloadIcon />}
                             sx={{
                                 color: "rgb(116, 128, 138)",
