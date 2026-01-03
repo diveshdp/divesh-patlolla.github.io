@@ -1,23 +1,11 @@
 /* ===============================
-   ABOUT SECTION (FIXED GRADIENT)
+   ABOUT SECTION
 ================================ */
 
 .about.background-alt {
-  position: relative;
+  background: radial-gradient(circle at top, #2a2a2a 0%, #1f1f1f 0%);
   padding: 80px 20px;
   min-height: 100vh;
-  overflow: hidden;
-}
-
-/* Smooth fixed gradient layer */
-.about.background-alt::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, #2a2a2a 0%, #1f1f1f 100%);
-  z-index: -1;
-  will-change: transform;
-  transform: translateZ(0);
 }
 
 /* ===============================
@@ -32,7 +20,7 @@
 .section-title h2 {
   font-size: 36px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
   position: relative;
   display: inline-block;
 }
@@ -45,8 +33,7 @@
   transform: translateX(-50%);
   width: 140px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .section-title h2::before {
@@ -57,7 +44,7 @@
   transform: translateX(-50%);
   width: 50px;
   height: 5px;
-  background: #0563bb;
+  background: #1e90ff;
   border-radius: 2px;
 }
 
@@ -81,22 +68,19 @@
 .about-image {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .about-image img {
   width: 100%;
   max-width: 350px;
-  height: auto;
   border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-image img:hover {
   transform: scale(1.05);
-  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.8);
 }
 
 /* ===============================
@@ -115,7 +99,7 @@
 }
 
 .about-content p {
-  color: #728394;
+  color: #9aa4ad;
   font-size: 15px;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -132,63 +116,21 @@
   margin-top: 30px;
 }
 
-.about-info ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .about-info li {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 12px;
-  color: #8a9199;
+  color: #a0a8b0;
   font-size: 15px;
 }
 
 .about-info i {
-  color: #0563bb;
-  margin-right: 12px;
-  margin-top: 2px;
-  font-size: 18px;
-}
-
-.about-info strong {
-  color: rgba(255, 255, 255, 0.85);
-  margin-right: 8px;
-  min-width: 80px;
-}
-
-.about-info span {
-  color: #8a9199;
-}
-
-.about-info a {
-  color: #0563bb;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.about-info a:hover {
   color: #1e90ff;
-  text-decoration: underline;
 }
 
 /* ===============================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ================================ */
 
 @media (max-width: 768px) {
   .about-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .about-image img {
-    max-width: 250px;
-  }
-
-  .about-info {
     grid-template-columns: 1fr;
   }
 
