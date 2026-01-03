@@ -7,7 +7,7 @@ import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 const Hero: React.FC = () => {
     return (
         <section id="hero" className="d-flex flex-column justify-content-center">
-            <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }} data-aos="zoom-in" data-aos-delay="500">
+            <div style={{ margin: "0 auto", padding: "0 15px" }} data-aos="zoom-in" data-aos-delay="500">
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px", alignItems: "center" }}>
                     <div className="item-center">
                         <h1>Divesh Patlolla</h1>

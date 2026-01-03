@@ -4,7 +4,7 @@ import React from "react";
 const About: React.FC = () => {
   return (
     <section id="about" className="about background-alt">
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 15px" }} data-aos="fade-up">
+      <div style={{ margin: "0 auto", padding: "0 15px" }} data-aos="fade-up">
         <div className="section-title">
           <h2>About</h2>
         </div>
