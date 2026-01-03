@@ -1,8 +1,8 @@
 import React from "react";
 import img from "../assets/profile.jpeg";
-import Typed from "typed.js";
 import Button from "@mui/material/Button";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import { ReactTyped } from "react-typed";
 
 const Hero: React.FC = () => {
     return (
@@ -10,12 +10,52 @@ const Hero: React.FC = () => {
             <div style={{ margin: "0 auto", padding: "0 15px" }} data-aos="zoom-in" data-aos-delay="500">
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px", alignItems: "center" }}>
                     <div className="item-center">
-                        <h1>Divesh Patlolla</h1>
+                        <h1
+                            style={{
+                                color: "#ffffff",
+                                fontSize: "48px",
+                                fontWeight: 700,
+                                marginBottom: "10px",
+                            }}
+                        >
+                            Divesh Patlolla
+                        </h1>
                         <br />
-                        <p>
-                            I'm&nbsp;
-                            <span className="typed" data-typed-items='["Developer", "Tabla Player", "Gamer"]'></span>
+                        <p
+                            style={{
+                                fontSize: "22px",
+                                color: "#9ca3af",
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "8px",
+                                paddingLeft: "200px"
+                            }}
+                        >
+                            <span>I'm a</span>
+
+                            <span
+                                style={{
+                                    color: "#1e90ff",
+                                    fontWeight: 600,
+                                    fontSize: "26px",
+                                    lineHeight: 1.2,
+                                    minWidth: "140px",     // 👈 KEY FIX
+                                    display: "inline-block",
+                                }}
+                            >
+                                <ReactTyped
+                                    strings={["Developer", "Cricketer", "Gamer"]}
+                                    typeSpeed={90}
+                                    loop
+                                    fadeOut
+                                    fadeOutDelay={200}
+                                    showCursor
+                                    cursorChar="|"
+                                />
+
+                            </span>
                         </p>
+
 
                         <div className="social-links">
                             <a href="https://www.instagram.com/reddy_patlolla_/">
