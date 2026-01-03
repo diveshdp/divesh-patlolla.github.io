@@ -1,4 +1,5 @@
 import React from "react";
+import "./Skills.css";
 
 const Skills: React.FC = () => {
   const skills: string[] = [
@@ -17,16 +18,17 @@ const Skills: React.FC = () => {
 
   return (
     <section id="skills" className="skills section-bg">
-      <div className="container" data-aos="fade-up">
+      <div data-aos="fade-up">
         <div className="section-title">
-          <h2>Skills</h2>
+          <h2>SKILLS</h2>
         </div>
-        <div>
-          <ul>
-            {skills.map((skill, i) => (
-              <li key={i}>{skill}</li>
-            ))}
-          </ul>
+
+        <div className="skills-container">
+          {skills.map((skill, i) => (
+            <div key={i} className="skill-badge">
+              {skill}
+            </div>
+          ))}
         </div>
       </div>
     </section>

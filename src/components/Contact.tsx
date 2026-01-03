@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
 
-const FORMSPARK_URL = "https://submit-form.com/CARCkqSD";
-
 const Contact: React.FC = () => {
   const [message, setMessage] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -13,23 +11,33 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setDisable(true);
 
+    const formData = new FormData();
+    formData.append("access_key", "55af89a8-4fc8-4128-8985-d79d204ec10a"); 
+    formData.append("email", email);
+    formData.append("message", message);
+    formData.append("subject", `Contact Form: ${email}`);
+
     try {
-      await fetch(FORMSPARK_URL, {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({ email, message }),
+        body: formData
       });
 
-      setOpen(true);
-      setEmail("");
-      setMessage("");
+      const data = await response.json();
+
+      if (data.success) {
+        setOpen(true);
+        setEmail("");
+        setMessage("");
+        setTimeout(() => setOpen(false), 5000);
+      } else {
+        alert("Failed to send. Please try again.");
+      }
     } catch (err) {
-      console.error(err);
+      console.error("Error:", err);
+      alert("Error occurred. Please try again.");
     } finally {
-      setTimeout(() => setDisable(false), 2000);
+      setDisable(false);
     }
   };
 
@@ -45,18 +53,21 @@ const Contact: React.FC = () => {
             <input
               className="contact-input"
               type="email"
-              placeholder="Email"
+              placeholder="Your Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              disabled={disable}
             />
 
             <textarea
               className="contact-textarea"
-              placeholder="Message"
+              placeholder="Your Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
+              disabled={disable}
+              rows={6}
             />
 
             <button
@@ -64,7 +75,7 @@ const Contact: React.FC = () => {
               type="submit"
               disabled={disable}
             >
-              Submit
+              {disable ? "Sending..." : "Submit"}
             </button>
           </form>
         </div>
@@ -72,7 +83,7 @@ const Contact: React.FC = () => {
 
       {open && (
         <div className="contact-toast">
-          Your Message is sent!
+          ✓ Your message has been sent successfully!
         </div>
       )}
     </section>

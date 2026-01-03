@@ -1,0 +1,106 @@
+/* ===============================
+   SKILLS SECTION
+================================ */
+
+.skills.section-bg {
+  background: radial-gradient(circle at top, #2a2a2a 0%, #1f1f1f 0%);
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+
+/* ===============================
+   SECTION TITLE
+================================ */
+
+.skills .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills .section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  position: relative;
+  display: inline-block;
+}
+
+.skills .section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.skills .section-title h2::before {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 5px;
+  background: #1e90ff;
+  border-radius: 2px;
+}
+
+/* ===============================
+   SKILLS CONTAINER
+================================ */
+
+.skills-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ===============================
+   SKILL BADGE
+================================ */
+
+.skill-badge {
+  background: #2a2a2a;
+  color: #b0b8bf;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-badge:hover {
+  background: #333333;
+  border-color: #1e90ff;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 768px) {
+  .skills .section-title h2 {
+    font-size: 28px;
+  }
+
+  .skills-container {
+    gap: 10px;
+  }
+
+  .skill-badge {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
