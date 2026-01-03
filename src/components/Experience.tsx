@@ -1,10 +1,6 @@
 import React, { type JSX } from "react";
-// import {
-//   VerticalTimeline,
-//   VerticalTimelineElement,
-// } from "react-vertical-timeline-component";
-// import "react-vertical-timeline-component/style.min.css";
 import WorkIcon from "@mui/icons-material/Work";
+import { VerticalTimeline, VerticalTimelineElement } from "./Timeline";
 
 interface TimelineItem {
   date: string;
@@ -57,44 +53,26 @@ const Experience: React.FC = () => {
         <div className="section-title">
           <h2>Experience</h2>
         </div>
-        <div className="row">
-          <div className="col-lg-12 d-flex justify-content-center">
-            {/* <VerticalTimeline className="custom-line">
-              {items.map((data, i) => (
-                <VerticalTimelineElement
-                  key={i}
-                  className="vertical-timeline-element--work"
-                  contentStyle={{ background: "#343a40" }}
-                  date={data.date}
-                  dateClassName="timeline-date"
-                  contentArrowStyle={{ borderRight: "7px solid rgb(33, 150, 243)" }}
-                  iconStyle={{ background: "#0563bb", color: "#fff" }}
-                  icon={<WorkIcon />}
-                >
-                  <h3
-                    className="vertical-timeline-element-title"
-                    style={{ fontSize: "14px", color: "rgba(255, 255, 255, 0.8)" }}
-                  >
-                    {data.cardTitle}
-                  </h3>
-                  <h4
-                    className="vertical-timeline-element-subtitle"
-                    style={{ fontSize: "1.2em", fontWeight: 350, color: "#7e8890" }}
-                  >
-                    {data.cardSubtitle}
-                  </h4>
-                  <ul
-                    style={{ fontSize: "1em", fontWeight: 350, color: "#74808a" }}
-                  >
-                    {Array.isArray(data.cardDetailedText)
-                      ? data.cardDetailedText
-                      : <li>{data.cardDetailedText}</li>}
-                  </ul>
-                </VerticalTimelineElement>
-              ))}
-            </VerticalTimeline> */}
-          </div>
-        </div>
+        <VerticalTimeline layout="2-columns" animate={true} lineColor="#0563bb">
+          {items.map((data, i) => (
+            <VerticalTimelineElement
+              key={i}
+              date={data.date}
+              icon={<WorkIcon />}
+              iconStyle={{ background: "#0563bb", color: "#fff" }}
+              position={i % 2 === 0 ? "left" : "right"}
+              visible={true}
+            >
+              <h3>{data.cardTitle}</h3>
+              <h4>{data.cardSubtitle}</h4>
+              <ul>
+                {Array.isArray(data.cardDetailedText)
+                  ? data.cardDetailedText
+                  : <li>{data.cardDetailedText}</li>}
+              </ul>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
       </div>
     </section>
   );
