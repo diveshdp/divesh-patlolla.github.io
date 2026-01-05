@@ -21,6 +21,37 @@ const Experience: React.FC = () => {
         "Optimized performance & quality with lazy loading, reusable components, Vitest & React Testing Library",
       ].map((text, idx) => <li key={idx}>{text}</li>),
     },
+    {
+      date: "May 2023 - Aug 2023",
+      cardTitle: "Virtual Agro-Commerce Ecosystem",
+      cardSubtitle: "Freelance UI/Full-Stack Developer",
+      cardDetailedText: [
+        "Built e-commerce platform for farmers with React + TypeScript and Python backend",
+        "Deployed on AWS (S3, Lambda, DynamoDB, CloudFront) with CI/CD pipelines",
+        "Handled 5000+ active users and delivered MVP in 12 weeks",
+      ].map((text, idx) => <li key={idx}>{text}</li>),
+    },
+    {
+      date: "Sep 2022 - Jan 2023",
+      cardTitle: "Kalaa",
+      cardSubtitle: "Freelance UI Developer",
+      cardDetailedText: [
+        "Developed digital art marketplace using React, Material UI, and Redux",
+        "Integrated AWS-hosted APIs for payments and authentication",
+        "Improved user engagement by 20% through optimized UI and responsive design",
+      ].map((text, idx) => <li key={idx}>{text}</li>),
+    },
+    {
+      date: "Jun 2020 - Dec 2021",
+      cardTitle: "HCL Technologies",
+      cardSubtitle: "UI Developer",
+      cardDetailedText: [
+        "Built responsive Angular applications integrated with REST APIs for finance client",
+        "Reduced page load time by 35% with lazy loading and code-splitting",
+        "Migrated legacy tables to Material UI, optimized Redux state management",
+        "Collaborated with QA, backend, and UX teams in Agile environment",
+      ].map((text, idx) => <li key={idx}>{text}</li>),
+    },
     // {
     //   date: "November 2020 – February 2021",
     //   cardTitle: "Mobisy Technologies",

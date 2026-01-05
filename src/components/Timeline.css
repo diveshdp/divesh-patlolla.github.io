@@ -1,3 +1,7 @@
+/* =========================================
+   BASE
+========================================= */
+.vertical-timeline,
 .vertical-timeline * {
   box-sizing: border-box;
 }
@@ -10,100 +14,79 @@
   padding: 2em 0;
 }
 
-.vertical-timeline::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
 .vertical-timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
-  height: 100%;
   width: 4px;
+  height: 100%;
   background: var(--line-color, #0563bb);
   margin-left: -2px;
+}
+
+.vertical-timeline::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .vertical-timeline--two-columns {
   width: 90%;
 }
 
+/* =========================================
+   TIMELINE ELEMENT
+========================================= */
 .vertical-timeline-element {
   position: relative;
   margin: 2em 0;
 }
 
-.vertical-timeline-element > div {
-  min-height: 1px;
-}
-
-.vertical-timeline-element:after {
-  content: '';
+.vertical-timeline-element::after {
+  content: "";
   display: table;
   clear: both;
 }
 
-.vertical-timeline-element:first-child {
-  margin-top: 0;
-}
-
-.vertical-timeline-element:last-child {
-  margin-bottom: 0;
-}
-
-@media only screen and (min-width: 1170px) {
+@media (min-width: 1170px) {
   .vertical-timeline-element {
     margin: 4em 0;
   }
-
-  .vertical-timeline-element:first-child {
-    margin-top: 0;
-  }
-
-  .vertical-timeline-element:last-child {
-    margin-bottom: 0;
-  }
 }
 
+/* =========================================
+   ICON
+========================================= */
 .vertical-timeline-element-icon {
   position: absolute;
   top: 0;
   left: 50%;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   margin-left: -20px;
+  border-radius: 50%;
+  background: var(--line-color, #0563bb);
+  border: 3px solid var(--line-color, #0563bb);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.vertical-timeline-element-icon.shadow-size-small {
-  box-shadow: 0 0 0 2px #2e2e2e, inset 0 1px 0 rgba(0, 0, 0, 0.08), 0 2px 0 4px rgba(0, 0, 0, 0.05);
-}
-
-.vertical-timeline-element-icon.shadow-size-medium {
-  box-shadow: 0 0 0 3px #2e2e2e, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 5px rgba(0, 0, 0, 0.05);
-}
-
-.vertical-timeline-element-icon.shadow-size-large {
-  box-shadow: 0 0 0 4px #2e2e2e, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 4px 0 6px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+  transform: translateZ(0);
 }
 
 .vertical-timeline-element-icon svg {
-  display: block;
   width: 24px;
   height: 24px;
+  color: #fff;
 }
 
-@media only screen and (min-width: 1170px) {
+@media (min-width: 1170px) {
   .vertical-timeline--two-columns .vertical-timeline-element-icon {
     width: 60px;
     height: 60px;
     margin-left: -30px;
+    border-width: 4px;
   }
 
   .vertical-timeline--two-columns .vertical-timeline-element-icon svg {
@@ -112,100 +95,50 @@
   }
 }
 
-.vertical-timeline-element-icon {
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-}
-
-.vertical-timeline--animate .vertical-timeline-element-icon.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
-  visibility: visible;
-  opacity: 1;
-  -webkit-animation: cd-bounce-1 0.6s ease-out;
-  -moz-animation: cd-bounce-1 0.6s ease-out;
-  animation: cd-bounce-1 0.6s ease-out;
-}
-
-@-webkit-keyframes cd-bounce-1 {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-  }
-}
-
-@-moz-keyframes cd-bounce-1 {
-  0% {
-    opacity: 0;
-    -moz-transform: scale(0.5);
-  }
-  60% {
-    opacity: 1;
-    -moz-transform: scale(1.2);
-  }
-  100% {
-    -moz-transform: scale(1);
-  }
-}
-
-@keyframes cd-bounce-1 {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
+/* =========================================
+   CONTENT CARD
+========================================= */
 .vertical-timeline-element-content {
   position: relative;
-  margin-left: 60px;
+  margin-left: 90px;
   background: #343a40;
-  border-radius: 0.25em;
+  border-radius: 4px;
   padding: 1em;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 5px solid rgba(255, 255, 255, 0.6);
 }
 
-.vertical-timeline-element-content:after {
-  content: '';
-  display: table;
-  clear: both;
+.vertical-timeline-element-content::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  border: 8px solid transparent;
+  border-right: 10px solid #0563bb;
+  /* margin-right: -7px; */
 }
 
+/* Typography */
 .vertical-timeline-element-content h3 {
   color: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  font-weight: 600;
   font-size: 1.1em;
+  font-weight: 600;
+  margin: 0;
 }
 
 .vertical-timeline-element-content h4 {
   color: #b0b8bf;
-  margin: 0.5em 0 1em 0;
-  font-weight: 400;
   font-size: 0.95em;
+  font-weight: 400;
+  margin: 0.5em 0 1em;
 }
 
 .vertical-timeline-element-content ul {
-  font-size: 0.9em;
-  color: #8a9199;
-  margin: 0;
   padding-left: 20px;
+  margin: 0;
+  color: #8a9199;
+  font-size: 0.9em;
   line-height: 1.6;
 }
 
@@ -213,220 +146,113 @@
   margin-bottom: 8px;
 }
 
-.vertical-timeline-element-content p {
-  font-size: 13px;
-  font-weight: 500;
-  margin: 1em 0 0;
-  line-height: 1.6;
-}
-
-.vertical-timeline-element-title {
-  margin: 0;
-}
-
-.vertical-timeline-element-subtitle {
-  margin: 0;
-}
-
 .vertical-timeline-element-date {
+  display: block;
+  margin-top: 15px;
   font-size: 0.85em;
   color: #74808a;
-  margin-top: 15px;
-  display: block;
 }
 
-.vertical-timeline-element-content-arrow {
-  content: '';
-  position: absolute;
-  top: 16px;
-  left: 100%;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-left: 7px solid #343a40;
-}
-
-@media only screen and (min-width: 768px) {
-  .vertical-timeline-element-content h3 {
-    font-size: 1.3em;
-  }
-
-  .vertical-timeline-element-content p {
-    font-size: 16px;
-  }
-
-  .vertical-timeline-element-content .vertical-timeline-element-date {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (min-width: 1170px) {
+/* =========================================
+   TWO COLUMN LAYOUT
+========================================= */
+@media (min-width: 1170px) {
   .vertical-timeline--two-columns .vertical-timeline-element-content {
-    margin-left: 0;
-    padding: 1.5em;
     width: 44%;
-  }
-
-  .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
-    top: 24px;
-    left: 100%;
-    transform: rotate(180deg);
-  }
-
-  .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
-    position: absolute;
-    width: 100%;
-    left: 124%;
-    top: 6px;
-    font-size: 16px;
-  }
-
-  .vertical-timeline--two-columns .vertical-timeline-element--right .vertical-timeline-element-content,
-  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content {
-    float: right;
-    margin-right: 0;
+    padding: 1.5em;
     margin-left: 0;
   }
 
-  .vertical-timeline--two-columns .vertical-timeline-element--right .vertical-timeline-element-content-arrow,
-  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow {
-    top: 24px;
+  /* Right cards */
+  .vertical-timeline--two-columns
+  .vertical-timeline-element--right
+  .vertical-timeline-element-content {
+    float: right;
+    /* margin-right: -0px; */
+  }
+
+  .vertical-timeline--two-columns
+  .vertical-timeline-element--right
+  .vertical-timeline-element-content::before {
     left: auto;
     right: 100%;
-    transform: rotate(0);
-    border-left: unset;
-    border-right: 7px solid #343a40;
+    border-right: 10px solid #0563bb;
   }
 
-  .vertical-timeline--two-columns .vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date,
-  .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date {
-    left: auto;
+  /* Left card arrow */
+  .vertical-timeline--two-columns
+  .vertical-timeline-element--left
+  .vertical-timeline-element-content::before {
+    margin-right: -20px;
+    margin-left: -7px;
+  }
+
+  /* Dates */
+  .vertical-timeline--two-columns
+  .vertical-timeline-element-content
+  .vertical-timeline-element-date {
+    position: absolute;
+    top: 6px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .vertical-timeline--two-columns
+  .vertical-timeline-element--right
+  .vertical-timeline-element-date {
     right: 124%;
     text-align: right;
   }
 
-  .vertical-timeline--two-columns .vertical-timeline-element--left .vertical-timeline-element-content {
-    margin-left: 60px;
-    margin-right: 0;
+  .vertical-timeline--two-columns
+  .vertical-timeline-element--left
+  .vertical-timeline-element-date {
+    left: 100%;
+    margin-right: 20%;
   }
 }
 
-.vertical-timeline--animate .vertical-timeline-element-content.is-hidden {
-  visibility: hidden;
+/* =========================================
+   ANIMATIONS
+========================================= */
+.vertical-timeline--animate
+.vertical-timeline-element-icon.is-hidden,
+.vertical-timeline--animate
+.vertical-timeline-element-content.is-hidden {
   opacity: 0;
+  visibility: hidden;
 }
 
-.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
-  visibility: visible;
+.vertical-timeline--animate
+.vertical-timeline-element-icon.bounce-in {
+  animation: icon-bounce 0.6s ease-out;
   opacity: 1;
-  -webkit-animation: cd-bounce-2 0.6s ease-out;
-  -moz-animation: cd-bounce-2 0.6s ease-out;
-  animation: cd-bounce-2 0.6s ease-out;
+  visibility: visible;
 }
 
-@media only screen and (min-width: 1170px) {
-  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element--right .vertical-timeline-element-content.bounce-in,
-  .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in {
-    -webkit-animation: cd-bounce-2-inverse 0.6s;
-    -moz-animation: cd-bounce-2-inverse 0.6s;
-    animation: cd-bounce-2-inverse 0.6s;
-  }
+.vertical-timeline--animate
+.vertical-timeline-element-content.bounce-in {
+  animation: content-bounce 0.6s ease-out;
+  opacity: 1;
+  visibility: visible;
 }
 
-@media only screen and (max-width: 1169px) {
-  .vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
-    visibility: visible;
-    -webkit-animation: cd-bounce-2-inverse 0.6s;
-    -moz-animation: cd-bounce-2-inverse 0.6s;
-    animation: cd-bounce-2-inverse 0.6s;
-  }
+@keyframes icon-bounce {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
 }
 
-@-webkit-keyframes cd-bounce-2 {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateX(20px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-  }
+@keyframes content-bounce {
+  0% { transform: translateX(-100px); opacity: 0; }
+  60% { transform: translateX(20px); opacity: 1; }
+  100% { transform: translateX(0); }
 }
 
-@-moz-keyframes cd-bounce-2 {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(-100px);
-  }
-  60% {
-    opacity: 1;
-    -moz-transform: translateX(20px);
-  }
-  100% {
-    -moz-transform: translateX(0);
-  }
-}
-
-@keyframes cd-bounce-2 {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(20px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes cd-bounce-2-inverse {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100px);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: translateX(-20px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-  }
-}
-
-@-moz-keyframes cd-bounce-2-inverse {
-  0% {
-    opacity: 0;
-    -moz-transform: translateX(100px);
-  }
-  60% {
-    opacity: 1;
-    -moz-transform: translateX(-20px);
-  }
-  100% {
-    -moz-transform: translateX(0);
-  }
-}
-
-@keyframes cd-bounce-2-inverse {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  60% {
-    opacity: 1;
-    transform: translateX(-20px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@media only screen and (max-width: 1169px) {
+/* =========================================
+   MOBILE
+========================================= */
+@media (max-width: 1169px) {
   .vertical-timeline::before {
     left: 20px;
   }
@@ -439,8 +265,12 @@
   .vertical-timeline-element-content {
     margin-left: 70px;
   }
+}
 
-  .vertical-timeline-element-content-arrow {
-    left: 100%;
+@media (min-width: 1170px) {
+  .vertical-timeline--two-columns
+  .vertical-timeline-element--left
+  .vertical-timeline-element-content {
+    margin-right: -30px;
   }
 }
