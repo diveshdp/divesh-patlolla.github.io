@@ -125,6 +125,7 @@
   font-size: 1.1em;
   font-weight: 600;
   margin: 0;
+  /* text-align: left; */
 }
 
 .vertical-timeline-element-content h4 {
@@ -132,6 +133,7 @@
   font-size: 0.95em;
   font-weight: 400;
   margin: 0.5em 0 1em;
+  /* text-align: left; */
 }
 
 .vertical-timeline-element-content ul {
@@ -140,10 +142,12 @@
   color: #8a9199;
   font-size: 0.9em;
   line-height: 1.6;
+  text-align: left;
 }
 
 .vertical-timeline-element-content li {
   margin-bottom: 8px;
+  text-align: left;
 }
 
 .vertical-timeline-element-date {
