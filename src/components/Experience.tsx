@@ -52,31 +52,6 @@ const Experience: React.FC = () => {
         "Collaborated with QA, backend, and UX teams in Agile environment",
       ].map((text, idx) => <li key={idx}>{text}</li>),
     },
-    // {
-    //   date: "November 2020 – February 2021",
-    //   cardTitle: "Mobisy Technologies",
-    //   cardSubtitle: "Research & Development Intern",
-    //   cardDetailedText: [
-    //     "Collected JSON data by web-scraping, using open API end points and storing it in a RDBMS.",
-    //     "Responsible for building SKU Classification system using the collected data.",
-    //   ].map((text, idx) => <li key={idx}>{text}</li>),
-    // },
-    // {
-    //   date: "September 2019 – October 2019",
-    //   cardTitle: "Techskills IT Consultants",
-    //   cardSubtitle: "Backend Developer",
-    //   cardDetailedText: [
-    //     "Developed applications using Spring Framework for Backend Restful API’s.",
-    //     "Wrote SQL/JPQL queries for Data persistence using Spring Data JPA.",
-    //   ].map((text, idx) => <li key={idx}>{text}</li>),
-    // },
-    // {
-    //   date: "August 2018 – January 2019",
-    //   cardTitle: "TechSkills IT Consultants",
-    //   cardSubtitle: "Fullstack Developer Intern",
-    //   cardDetailedText:
-    //     "Developed a Meeting App website which handles all the data that happens in a meeting. In this project I developed several REST API's using Spring Boot and used the MVC architecture. These API's are being consumed in the frontend.",
-    // },
   ];
 
   return (

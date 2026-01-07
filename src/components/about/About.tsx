@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/profile.jpeg";
+import img from "../../assets/profile.jpeg";
 import "./About.css";
 
 const About: React.FC = () => {
