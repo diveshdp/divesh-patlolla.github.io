@@ -49,7 +49,7 @@ const About: React.FC = () => {
                   <li>
                     <i className="bi bi-chevron-right"></i>
                     <strong>Degree:</strong>
-                    <span>Masters - Information Systems @ Trine University (2022-2023)</span>
+                    <span>Masters - Information Systems @ Trine University</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i>

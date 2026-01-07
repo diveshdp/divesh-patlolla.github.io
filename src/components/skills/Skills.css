@@ -14,38 +14,73 @@
 
 .skills .section-title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .skills .section-title h2 {
   font-size: 36px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.95);
   position: relative;
   display: inline-block;
+  letter-spacing: 1px;
 }
 
 .skills .section-title h2::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
   width: 140px;
   height: 1px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .skills .section-title h2::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
-  height: 5px;
+  height: 4px;
   background: #1e90ff;
   border-radius: 2px;
+}
+
+/* ===============================
+   SKILL GROUP
+================================ */
+
+.skills-group {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+/* ===============================
+   GROUP HEADING
+================================ */
+
+.skills-heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 6px;
+  letter-spacing: 0.4px;
+}
+
+/* ===============================
+   GROUP SUBTITLE
+================================ */
+
+.skills-subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 520px;
+  margin: 0 auto 36px auto;
+  line-height: 1.6;
+  position: relative;
 }
 
 /* ===============================
@@ -53,7 +88,7 @@
 ================================ */
 
 .skills-container {
-  max-width: 900px;
+  max-width: 968px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -68,21 +103,22 @@
 .skill-badge {
   background: #2a2a2a;
   color: #b0b8bf;
-  padding: 12px 24px;
+  padding: 12px 22px;
   border-radius: 6px;
   font-size: 15px;
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   cursor: default;
+  white-space: nowrap;
 }
 
 .skill-badge:hover {
   background: #333333;
   border-color: #1e90ff;
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(30, 144, 255, 0.3);
+  box-shadow: 0 6px 18px rgba(30, 144, 255, 0.25);
   transform: translateY(-2px);
 }
 
@@ -91,8 +127,21 @@
 ================================ */
 
 @media (max-width: 768px) {
+  .skills.section-bg {
+    padding: 60px 16px;
+  }
+
   .skills .section-title h2 {
     font-size: 28px;
+  }
+
+  .skills-heading {
+    font-size: 22px;
+  }
+
+  .skills-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
   }
 
   .skills-container {
@@ -102,5 +151,9 @@
   .skill-badge {
     padding: 10px 18px;
     font-size: 14px;
+  }
+
+  .skills-group {
+    margin-bottom: 70px;
   }
 }
