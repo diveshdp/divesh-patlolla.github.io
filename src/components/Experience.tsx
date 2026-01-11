@@ -22,9 +22,9 @@ const Experience: React.FC = () => {
       ].map((text, idx) => <li key={idx}>{text}</li>),
     },
     {
-      date: "May 2023 - Aug 2023",
+      date: "Jan 2023 - Aug 2023",
       cardTitle: "Virtual Agro-Commerce Ecosystem",
-      cardSubtitle: "Freelance UI/Full-Stack Developer",
+      cardSubtitle: "Freelance Full-Stack Developer",
       cardDetailedText: [
         "Built e-commerce platform for farmers with React + TypeScript and Python backend",
         "Deployed on AWS (S3, Lambda, DynamoDB, CloudFront) with CI/CD pipelines",
