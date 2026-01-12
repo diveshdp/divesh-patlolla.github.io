@@ -1,5 +1,4 @@
 import React from "react";
-import About from "./about/About";
 import Skills from "./skills/Skills";
 import Experience from "./Experience";
 // import Projects from "./Projects";
@@ -9,8 +8,7 @@ import Footer from "./Footer";
 import Contact from "./contact/Contact";
 
 const Main: React.FC = () => (
-  <main id="main">
-    <About />
+  <main id="main" style={{ width: "100%" }}>
     <Experience />
     {/* <Projects /> */}
     <Education />

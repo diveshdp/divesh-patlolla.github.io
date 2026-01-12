@@ -9,7 +9,7 @@ function App() {
   // const [count, setCount] = useState<number>(0);
 
   return (
-    <div className="App" style={{ background: "rgba(46, 45, 43, 1)" }}>
+    <div className="App" style={{ background: "rgba(46, 45, 43, 1)", width: "100%" }}>
       <Header/>
       <Hero/>
       <Main/>

@@ -14,7 +14,7 @@ const Experience: React.FC = () => {
     {
       date: "January 2024 - Present",
       cardTitle: "Vanguard",
-      cardSubtitle: "Frontend Engineer (React & Micro Frontends)",
+      cardSubtitle: "Senior Frontend Engineer (React, Micro Frontends & Go lang)",
       cardDetailedText: [
         "Built dynamic web apps using React, React Query, Zustand, and MUI/AG Grid for enterprise systems",
         "Implemented modular micro-frontend architectures with Module Federation across multiple teams",
