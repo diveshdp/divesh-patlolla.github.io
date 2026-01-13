@@ -37,25 +37,23 @@ const Hero: React.FC = () => {
                     Download Resume
                 </Button>
                 <div className="about-container">
-                    {/* LEFT: IMAGE */}
+                    {/* LEFT */}
                     <div className="about-image">
                         <img src={img} alt="Profile" />
                     </div>
 
-                    {/* RIGHT: CONTENT */}
+                    {/* RIGHT */}
                     <div className="about-content">
+                        <h3>Software Developer.</h3>
 
-                        <h3>Software Developer</h3>
-
-                        <p>
-                            A passionate Full Stack Developer, Competitive Programmer,
-                            Cricketer.
+                        <p className="subtext">
+                            A passionate Full Stack Developer, Competitive Programmer, Cricketer.
                         </p>
 
-                        <p>
+                        <p className="desc">
                             Always seeking challenging position in an organization where my
-                            skills find ample opportunities for upgradation and growth of
-                            the company.
+                            skills find ample opportunities for upgradation and growth of the
+                            company.
                         </p>
 
                         <div className="about-info">
@@ -79,7 +77,7 @@ const Hero: React.FC = () => {
                                     <li>
                                         <i className="bi bi-chevron-right"></i>
                                         <strong>Degree:</strong>
-                                        <span>Masters - Information Systems @ Trine University (2022-2023)</span>
+                                        <span>Masters - Information Systems @ Trine University</span>
                                     </li>
                                     <li>
                                         <i className="bi bi-chevron-right"></i>
@@ -102,8 +100,6 @@ const Hero: React.FC = () => {
                             </a>
                             <a href="mailto:diveshree77@gmail.com">Email</a>
                         </div>
-
-
                     </div>
                 </div>
             </div>
