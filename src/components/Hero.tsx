@@ -27,12 +27,15 @@ const Hero: React.FC = () => {
                 </p>
                 <Button
                     variant="outlined"
+                                  target="_blank"
+
                     startIcon={<CloudDownloadIcon />}
                     sx={{
                         color: "rgb(116, 128, 138)",
                         borderColor: "rgb(116, 128, 138)",
                         marginTop: "20px",
                     }}
+                    href= "https://docs.google.com/document/d/1qO5JaWxFeGTD13HxfMWUq84a8b5GiGFR/edit"
                 >
                     Download Resume
                 </Button>
@@ -44,7 +47,7 @@ const Hero: React.FC = () => {
 
                     {/* RIGHT */}
                     <div className="about-content">
-                        <h3>Software Developer.</h3>
+                        <h3 className="hero-name">Software Developer.</h3>
 
                         <p className="subtext">
                             A passionate Full Stack Developer, Competitive Programmer, Cricketer.

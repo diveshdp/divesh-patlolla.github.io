@@ -1,7 +1,7 @@
 import React, { type JSX } from "react";
 import WorkIcon from "@mui/icons-material/Work";
 import { VerticalTimeline, VerticalTimelineElement } from "./Timeline";
-
+import "./Experience.css";
 interface TimelineItem {
   date: string;
   cardTitle: string;
@@ -58,7 +58,7 @@ const Experience: React.FC = () => {
     <section id="experience" className="about background-alt">
       <div className="container" data-aos="fade-up">
         <div className="section-title">
-          <h2>Experience</h2>
+          <h2>EXPERIENCE</h2>
         </div>
         <VerticalTimeline layout="2-columns" animate={true} lineColor="#0563bb">
           {items.map((data, i) => (

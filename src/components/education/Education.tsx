@@ -40,7 +40,7 @@ const Education: React.FC = () => {
         <section id="education" className="about background-alt">
             <div className="container" data-aos="fade-up">
                 <div className="section-title">
-                    <h2>Education</h2>
+                    <h2>EDUCATION</h2>
                 </div>
                 <VerticalTimeline layout="2-columns" animate={true} lineColor="#0563bb">
                     {educationItems.map((item, i) => (

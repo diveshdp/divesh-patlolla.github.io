@@ -1,0 +1,35 @@
+
+ .section-title {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+ .section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: #1e90ff;
+  border-radius: 2px;
+}
