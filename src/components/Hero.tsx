@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
                         borderColor: "rgb(116, 128, 138)",
                         marginTop: "20px",
                     }}
-                    href= "https://docs.google.com/document/d/1qO5JaWxFeGTD13HxfMWUq84a8b5GiGFR/edit"
+                    href="https://drive.google.com/file/d/1b--_Ay3AIc_UetOR9xtj4oNRZ0YNAFHG/view"
                 >
                     Download Resume
                 </Button>
@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
 
                     {/* RIGHT */}
                     <div className="about-content">
-                        <h3 className="hero-name">Full Stack Developer.</h3>
+                        <h3 className="hero-name">Full Stack Developer</h3>
 
                         <p className="subtext">
                             A passionate Full Stack Developer, Competitive Programmer, Cricketer.
