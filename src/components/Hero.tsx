@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
 
                     {/* RIGHT */}
                     <div className="about-content">
-                        <h3 className="hero-name">Software Developer.</h3>
+                        <h3 className="hero-name">Full Stack Developer.</h3>
 
                         <p className="subtext">
                             A passionate Full Stack Developer, Competitive Programmer, Cricketer.

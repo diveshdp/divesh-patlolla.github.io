@@ -22,7 +22,7 @@ const Experience: React.FC = () => {
       ].map((text, idx) => <li key={idx}>{text}</li>),
     },
     {
-      date: "Jan 2023 - Aug 2023",
+      date: "Jan 2022 - Aug 2023",
       cardTitle: "Virtual Agro-Commerce Ecosystem",
       cardSubtitle: "Freelance Full-Stack Developer",
       cardDetailedText: [
