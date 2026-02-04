@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
-import Hero from "./components/Hero";
+import Hero from "./components/hero/Hero";
 import Main from "./components/Main";
 // import useTemplateFeatures from "./hooks/useTemplateFeatures";
 

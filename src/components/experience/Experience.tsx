@@ -1,6 +1,6 @@
 import React, { type JSX } from "react";
 import WorkIcon from "@mui/icons-material/Work";
-import { VerticalTimeline, VerticalTimelineElement } from "./Timeline";
+import { VerticalTimeline, VerticalTimelineElement } from "../timelineComponent/Timeline";
 import "./Experience.css";
 interface TimelineItem {
   date: string;

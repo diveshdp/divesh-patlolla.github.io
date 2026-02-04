@@ -1,6 +1,6 @@
 import React, { type JSX } from "react";
 import SchoolIcon from "@mui/icons-material/School";
-import { VerticalTimeline, VerticalTimelineElement } from "../Timeline";
+import { VerticalTimeline, VerticalTimelineElement } from "../timelineComponent/Timeline";
 
 interface EducationItem {
     date: string;

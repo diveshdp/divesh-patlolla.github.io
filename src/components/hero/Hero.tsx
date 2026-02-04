@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/profile.jpeg";
+import img from "../../assets/profile.jpeg"; 
 import Button from "@mui/material/Button";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import { ReactTyped } from "react-typed";

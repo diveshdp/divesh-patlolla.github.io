@@ -1,6 +1,6 @@
 import React from "react";
 import Skills from "./skills/Skills";
-import Experience from "./Experience";
+import Experience from "./experience/Experience";
 // import Projects from "./Projects";
 import Education from "./education/Education";
 // import Achievements from "./Achievements";
