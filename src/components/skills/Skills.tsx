@@ -17,13 +17,20 @@ const primaryStack = [
   "React Testing Library",
   "Vitest",
   "Playwright",
+  "Vue.js",
+  "ES6+",
+  "Webpack",
+  "Responsive Design",
+  "Single Page Applications (SPA)",
 ];
 
 const backendAndCloud = [
-    "Golang",
+  "Golang",
   "Java",
   "SpringBoot",
   "Python",
+  "Node.js",
+  " Express.js",
   "Flask",
   "MongoDB",
   "MySQL",
@@ -33,6 +40,8 @@ const backendAndCloud = [
   "Azure",
   "CI/CD",
   "Microservices",
+  "MongoDB",
+  "NoSQL Databases",
 ];
 
 const additionalExperience = [
@@ -44,6 +53,9 @@ const additionalExperience = [
   "Agile Methodologies",
   "JIRA",
   "Bootstrap",
+  "Docker",
+  "Kubernetes",
+  "Terraform",
 ];
 
 const Skills: React.FC = () => {
