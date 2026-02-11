@@ -12,7 +12,7 @@ interface TimelineItem {
 const Experience: React.FC = () => {
   const items: TimelineItem[] = [
     {
-      date: "January 2024 - Present",
+      date: "July 2023 - Present",
       cardTitle: "Vanguard",
       cardSubtitle: "Senior Frontend Engineer (React, Micro Frontends & Go lang)",
       cardDetailedText: [
@@ -42,7 +42,7 @@ const Experience: React.FC = () => {
       ].map((text, idx) => <li key={idx}>{text}</li>),
     },
     {
-      date: "Jun 2020 - Dec 2021",
+      date: "Jun 2019 - Dec 2021",
       cardTitle: "HCL Technologies",
       cardSubtitle: "UI Developer",
       cardDetailedText: [
