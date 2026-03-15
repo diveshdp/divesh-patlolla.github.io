@@ -16,31 +16,38 @@ html, body {
 /* Wrapper */
 .hero-wrapper {
   width: 100%;
-  padding: 40px 60px;
+  padding: 40px 105px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Layout */
 .about-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-  padding: 30px 50px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  /* padding: 40px 0; */
+  /* width: 100%; */
 }
 
 /* Image */
 .about-image {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
 }
 
 .about-image img {
-  width: 100%;
-  max-width: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
 }
 
 .about-image img:hover {
@@ -53,34 +60,52 @@ html, body {
   color: #ffffff;
   font-size: 48px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  margin-top: 0;
+  text-align: center;
 }
 
 .about-content h3 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+  margin-top: 0;
   color: #ffffff;
+  line-height: 1.4;
+  text-align: center;
 }
 
 /* Typed text */
 .typed-line {
-  font-size: 22px;
+  font-size: 20px;
   color: #9ca3af;
+  margin-bottom: 25px;
+  line-height: 1.5;
 }
 
 .typed-text {
   color: #1e90ff;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 24px;
   margin-left: 8px;
+}
+
+/* Download Resume Button */
+.hero-wrapper button {
+  display: block !important;
+  width: 100% !important;
+  max-width: 500px;
+  text-align: center;
+  margin: 25px 0 40px 0 !important;
 }
 
 /* Text styles */
 .subtext {
   color: #8fa3b8;
-  font-size: 16px;
-  margin-bottom: 18px;
+  font-size: 15px;
+  margin-bottom: 30px;
+  line-height: 1.7;
+  text-align: center;
 }
 
 .desc {
@@ -93,19 +118,27 @@ html, body {
 .about-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px 40px;
-  margin-bottom: 25px;
+  gap: 24px 60px;
+  margin-bottom: 30px;
+  margin-top: 25px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-info ul {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 0;
 }
 
 .about-info li {
-  margin-bottom: 8px;
-  font-size: 16px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 /* Requested color rules */
@@ -114,25 +147,32 @@ html, body {
 }
 
 .about-content strong {
-  color: #6f859d;
+  color: #a8bcc9;
   font-weight: 600;
 }
 
 .about-info i {
   color: #0071e3;
-  padding-right: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  min-width: 20px;
 }
 
 /* Social */
 .social-links {
   display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  justify-content: center;
 }
 
 .social-links a {
   color: #9ca3af;
   text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .social-links a:hover {
@@ -144,13 +184,29 @@ html, body {
   .about-container {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
+  }
+
+  .about-image {
+    flex: 0 0 280px;
+    justify-content: center;
   }
 
   .about-image img {
-    width: 260px;
+    width: 280px;
+    height: 280px;
   }
 
   .about-info {
     grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .hero-wrapper {
+    padding: 40px 30px;
   }
 }
