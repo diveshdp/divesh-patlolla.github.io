@@ -1,22 +1,68 @@
+/* FIXED: background matches Skills section exactly */
+#certifications {
+  background: rgba(46, 45, 43, 1);
+  padding: 80px 20px;
+}
+
+#certifications .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#certifications .section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+#certifications .section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+#certifications .section-title h2::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: #1e90ff;
+  border-radius: 2px;
+}
+
 .certs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .cert-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: #2a2a2a;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 3px solid #0563bb;
+  border-left: 3px solid #1e90ff;
   border-radius: 8px;
-  padding: 16px 18px;
-  transition: border-color 0.2s;
+  padding: 18px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .cert-card:hover {
-  border-color: #0563bb;
-  border-left-color: #0563bb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 144, 255, 0.15);
 }
 
 .cert-name {
@@ -34,7 +80,7 @@
 
 .cert-date {
   font-size: 11px;
-  color: #0563bb;
+  color: #1e90ff;
   font-family: monospace;
 }
 

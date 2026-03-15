@@ -1,22 +1,69 @@
-/* Projects — was empty, now styled to match site theme */
+/* Projects section — background matches Skills and Experience */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* FIXED: added section background to match rest of site */
+#projects {
+  background: rgba(46, 45, 43, 1);
+  padding: 80px 20px;
+}
+
+#projects .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#projects .section-title h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+#projects .section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+#projects .section-title h2::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: #1e90ff;
+  border-radius: 2px;
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: #2a2a2a;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   padding: 20px 22px;
   transition: border-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .project-card:hover {
-  border-color: #0563bb;
+  border-color: #1e90ff;
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 144, 255, 0.15);
 }
 
 .project-name {
@@ -36,7 +83,7 @@
 .project-link {
   display: inline-block;
   font-size: 12px;
-  color: #0563bb;
+  color: #1e90ff;
   text-decoration: none;
   margin-bottom: 12px;
   font-family: monospace;
@@ -53,10 +100,10 @@
 }
 
 .project-tag {
-  background: rgba(5, 99, 187, 0.15);
+  background: rgba(30, 144, 255, 0.12);
   color: #74a8e8;
   font-size: 11px;
   padding: 3px 9px;
   border-radius: 4px;
-  border: 1px solid rgba(5, 99, 187, 0.25);
+  border: 1px solid rgba(30, 144, 255, 0.2);
 }

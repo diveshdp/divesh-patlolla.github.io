@@ -1,16 +1,12 @@
 /* ===============================
-   SKILLS SECTION
+   SKILLS SECTION — FIXED background to match rgba(46,45,43,1)
 ================================ */
 
 .skills.section-bg {
-  background: radial-gradient(circle at top, #2a2a2a 0%, #1f1f1f 0%);
+  background: rgba(46, 45, 43, 1);
   padding: 80px 20px;
   min-height: 100vh;
 }
-
-/* ===============================
-   SECTION TITLE
-================================ */
 
 .skills .section-title {
   text-align: center;
@@ -49,18 +45,10 @@
   border-radius: 2px;
 }
 
-/* ===============================
-   SKILL GROUP
-================================ */
-
 .skills-group {
   text-align: center;
   margin-bottom: 90px;
 }
-
-/* ===============================
-   GROUP HEADING
-================================ */
 
 .skills-heading {
   font-size: 26px;
@@ -70,22 +58,13 @@
   letter-spacing: 0.4px;
 }
 
-/* ===============================
-   GROUP SUBTITLE
-================================ */
-
 .skills-subtitle {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.65);
   max-width: 520px;
   margin: 0 auto 36px auto;
   line-height: 1.6;
-  position: relative;
 }
-
-/* ===============================
-   SKILLS CONTAINER
-================================ */
 
 .skills-container {
   max-width: 968px;
@@ -96,10 +75,7 @@
   gap: 12px;
 }
 
-/* ===============================
-   SKILL BADGE
-================================ */
-
+/* FIXED: badge background darkened slightly to create card contrast on new bg */
 .skill-badge {
   background: #2a2a2a;
   color: #b0b8bf;
@@ -122,38 +98,12 @@
   transform: translateY(-2px);
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-================================ */
-
 @media (max-width: 768px) {
-  .skills.section-bg {
-    padding: 60px 16px;
-  }
-
-  .skills .section-title h2 {
-    font-size: 28px;
-  }
-
-  .skills-heading {
-    font-size: 22px;
-  }
-
-  .skills-subtitle {
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
-
-  .skills-container {
-    gap: 10px;
-  }
-
-  .skill-badge {
-    padding: 10px 18px;
-    font-size: 14px;
-  }
-
-  .skills-group {
-    margin-bottom: 70px;
-  }
+  .skills.section-bg { padding: 60px 16px; }
+  .skills .section-title h2 { font-size: 28px; }
+  .skills-heading { font-size: 22px; }
+  .skills-subtitle { font-size: 14px; margin-bottom: 30px; }
+  .skills-container { gap: 10px; }
+  .skill-badge { padding: 10px 18px; font-size: 14px; }
+  .skills-group { margin-bottom: 70px; }
 }

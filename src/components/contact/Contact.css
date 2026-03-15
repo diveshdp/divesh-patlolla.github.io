@@ -32,7 +32,7 @@
   padding: 36px;
   border-radius: 16px;
 
-  background: #262626;
+  /* background: #262626; */
 
   /* Clean layered shadow */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45),
