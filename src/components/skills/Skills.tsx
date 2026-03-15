@@ -1,61 +1,75 @@
 import React from "react";
 import "./Skills.css";
 
+// CHANGED: added Golang, Python up front; removed Vue.js; added Okta SSO, SailPoint RBAC, GraphQL, AG Grid
 const primaryStack = [
-  "JavaScript",
-  "TypeScript",
   "React",
+  "TypeScript",
+  "JavaScript",
+  "Golang",
+  "Python",
   "Redux",
   "Zustand",
   "React Query",
-  "Material UI",
   "Tailwind CSS",
+  "AG Grid",
   "RESTful APIs",
+  "GraphQL",
   "Micro Frontends",
   "Module Federation",
   "Jest",
-  "React Testing Library",
-  "Vitest",
   "Playwright",
-  "Vue.js",
+  "React Testing Library",
+  "Okta SSO",
+  "SailPoint RBAC",
   "ES6+",
-  "Webpack",
   "Responsive Design",
   "Single Page Applications (SPA)",
 ];
 
+// CHANGED: removed duplicate MongoDB; added Kafka, RabbitMQ, Redis, PostgreSQL, Kubernetes, ELK Stack
 const backendAndCloud = [
-  "Golang",
   "Java",
-  "SpringBoot",
-  "Python",
+  "Spring Boot",
   "Node.js",
-  " Express.js",
+  "Python",
   "Flask",
-  "MongoDB",
-  "MySQL",
+  "Express.js",
+  "Apache Kafka",
+  "RabbitMQ",
+  "gRPC",
+  "PostgreSQL",
   "Oracle DB",
+  "MySQL",
+  "MongoDB",
+  "Redis",
+  "Elasticsearch",
   "Docker",
+  "Kubernetes",
   "AWS",
   "Azure",
   "CI/CD",
   "Microservices",
-  "MongoDB",
-  "NoSQL Databases",
+  "ELK Stack",
+  "Grafana",
+  "Prometheus",
 ];
 
+// CHANGED: removed duplicate Docker; added GitHub Copilot, Cursor AI, Claude, Figma, Postman
 const additionalExperience = [
   "Angular",
   "Hibernate",
-  "Machine Learning",
-  "GraphQL",
+  "Terraform",
   "Git",
   "Agile Methodologies",
   "JIRA",
+  "Figma",
+  "Postman",
+  "GitHub Copilot",
+  "Cursor AI",
+  "Claude (Anthropic)",
   "Bootstrap",
-  "Docker",
-  "Kubernetes",
-  "Terraform",
+  "Machine Learning",
 ];
 
 const Skills: React.FC = () => {
@@ -83,9 +97,9 @@ const Skills: React.FC = () => {
 
         {/* Backend & Cloud */}
         <div className="skills-group">
-          <h3 className="skills-heading">Backend & Cloud</h3>
+          <h3 className="skills-heading">Backend &amp; Cloud</h3>
           <p className="skills-subtitle">
-            Backend systems, APIs, and cloud infrastructure I’ve built and maintained.
+            Backend systems, APIs, and cloud infrastructure I've built and maintained.
           </p>
           <div className="skills-container">
             {backendAndCloud.map((skill) => (
@@ -100,7 +114,7 @@ const Skills: React.FC = () => {
         <div className="skills-group">
           <h3 className="skills-heading">Additional Experience</h3>
           <p className="skills-subtitle">
-            Technologies I’ve used across enterprise and project-based work.
+            Technologies I've used across enterprise and project-based work.
           </p>
           <div className="skills-container">
             {additionalExperience.map((skill) => (
