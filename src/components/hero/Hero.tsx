@@ -43,11 +43,10 @@ const Hero: React.FC = () => {
                         borderColor: "rgb(116, 128, 138)",
                         marginTop: "20px",
                     }}
-                    href="https://drive.google.com/file/d/1b--_Ay3AIc_UetOR9xtj4oNRZ0YNAFHG/view"
+                    href="https://drive.google.com/file/d/1tzH-qSaeiDyYRXwLn5ffpRCp8MuUPwWA/view?usp=sharing"
                 >
                     Download Resume
                 </Button>
-
                 <div className="about-container">
                     {/* LEFT */}
                     <div className="about-image">
