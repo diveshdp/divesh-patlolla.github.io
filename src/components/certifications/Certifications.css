@@ -1,12 +1,13 @@
 /* FIXED: background matches Skills section exactly */
 #certifications {
   background: rgba(46, 45, 43, 1);
-  padding: 80px 20px;
+  padding: 0px 20px 0px 20px;
+  min-height: 60vh;
 }
 
 #certifications .section-title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #certifications .section-title h2 {
