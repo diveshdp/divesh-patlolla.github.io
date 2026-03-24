@@ -49,6 +49,16 @@ const Experience: React.FC = () => {
         "Drove CI/CD automation (Jenkins, uDeploy, SonarQube, Fortify) — improved delivery velocity 25% and cut production bugs 30%.",
       ].map((text, idx) => <li key={idx}>{text}</li>),
     },
+    {
+      date: "Jan 2023 - Sep 2023",
+      cardTitle: "Virtual Agro-Commerce Ecosystem",
+      cardSubtitle: "Freelance UI/Full-Stack Developer",
+      cardDetailedText: [
+        "Built e-commerce platform for farmers with React + TypeScript and Python backend",
+        "Deployed on AWS (S3, Lambda, DynamoDB, CloudFront) with CI/CD pipelines",
+        "Handled 5000+ active users and delivered MVP in 12 weeks",
+      ].map((text, idx) => <li key={idx}>{text}</li>),
+    },
   ];
 
   return (
